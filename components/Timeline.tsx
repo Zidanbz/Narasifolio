@@ -1,13 +1,13 @@
 ﻿import { Container } from './Container';
 
-type TimelineItem = {
+type TimelineItem = Readonly<{
   year: string;
   title: string;
   story: string;
-};
+}>;
 
 type TimelineProps = {
-  items: TimelineItem[];
+  items: ReadonlyArray<TimelineItem>;
 };
 
 export function Timeline({ items }: TimelineProps) {

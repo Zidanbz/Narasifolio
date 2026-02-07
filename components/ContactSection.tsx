@@ -35,10 +35,10 @@ function ContactCard({ label, description, detail, buttonLabel, href, variant }:
   );
 }
 
-type SocialItem = {
+type SocialItem = Readonly<{
   label: string;
   href: string;
-};
+}>;
 
 type ContactSectionProps = {
   title: string;
@@ -61,7 +61,7 @@ type ContactSectionProps = {
     message: string;
   };
   socialsTitle: string;
-  socials: SocialItem[];
+  socials: ReadonlyArray<SocialItem>;
 };
 
 export function ContactSection({

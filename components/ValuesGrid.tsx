@@ -1,12 +1,12 @@
 ﻿import { Container } from './Container';
 
-type ValueItem = {
+type ValueItem = Readonly<{
   title: string;
   description: string;
-};
+}>;
 
 type ValuesGridProps = {
-  items: ValueItem[];
+  items: ReadonlyArray<ValueItem>;
 };
 
 export function ValuesGrid({ items }: ValuesGridProps) {
